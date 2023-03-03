@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  <title>SheCodes Plus</title>
+</head>
+<body>
+ <div class="container">
+  <div class="weather-app">
+    <form class="search-form" id="search-form">
+      <div class="row">
+        <div class="col-9">
+          <input type="search" placeholder="Enter a city.." id="city-input" autofocus="on" autocomplete="off" class="form-control shadow-sm" />
+        </div>
+        <div class="col-3">
+          <input type="submit" value="Search" class="form-control btn btn-primary shadow-sm" />
+        </div>
+        <div class="col-3">
+          <input type="submit" value="Current" id="current-location" class="form-control btn btn-primary shadow-sm" />
+        </div>
+      </div>
+    </form>
+    <h1 id="city">
+    </h1>
+    <ul>
+      <li id="date">
+      </li>
+      <li id="description">
+      </li>
+    </ul>
+    <div class="row">
+      <div class="col-6">
+        <div class="clearfix">
+          <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+          alt="Cloudy icon"
+          class="weather-icon float-left"
+          />
+          <div class="float-left">
+            <span class="temp" id="temp"></span>
+            <span class="units"> 
+              <a href="#" id="celsius-link">°C</a> | <a href="#" id="fahrenheit-link">°F</a></span>
+          </div>
+        </div>
+      </div>
+      <div class="col-6">
+        <ul>
+          <li>
+            Humidity: <span id="humidity">%</span>
+          </li>
+          <li>
+            Wind: <span id="wind">km/h</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+ </div>
+  <script src="./script.js"></script>
+</body>
+</html>
